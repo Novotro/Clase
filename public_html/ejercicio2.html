@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var frutas = ["manzana", "pera", "melocotón", "plátano", "melón", "sandía", "naranja"];
+
+            function primera() {
+                document.getElementById("texto").innerHTML = "<p>El primer término es: " + frutas[0];
+            }
+            function ordenar() {
+                document.getElementById("texto").innerHTML = "<p>El array ordenado es: " + frutas.sort();
+            }
+            function eliminar() {
+                frutas.splice(0, 1);
+                document.getElementById("texto").innerHTML = "<p>El array resultado tras eliminar el primer término es:  " + frutas;
+            }
+
+            function añadir() {
+                frutas.splice(2, 1,"Kiwi");
+                document.getElementById("texto").innerHTML = "<p>El array resultado tras eliminar el tercer término y añadir kiwi es:   " + frutas;
+            }
+            function ultimo() {
+               
+                document.getElementById("texto").innerHTML = "<p>El último término es:  " + frutas[frutas.length-1];
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <p id="texto"></p>
+        <input type="button" value="A" onclick="primera()">
+        <input type="button" value="B" onclick="ordenar()">
+        <input type="button" value="C" onclick="eliminar()">
+        <input type="button" value="D" onclick="añadir()">
+        
+        <input type="button" value="E" onclick="ultimo()">
+    </body>
+</html>
